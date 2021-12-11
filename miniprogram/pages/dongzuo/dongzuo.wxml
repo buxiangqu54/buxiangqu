@@ -1,0 +1,68 @@
+
+<!-- 轮播图 -->
+<view class="swiperContainer">
+      <swiper class="imageContainer" bindchange="swiperChange" previous-margin="55rpx" next-margin="55rpx" circular autoplay>
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item class="turnItem" >
+            <image  class="itemImg {{index == swiperCurrent ? 'imgActive': ''}}" src="{{item.image}}"   ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+        <!-- 指示点的修饰 -->
+        <view class="dots">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+              <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+      </view>
+      <!-- 内容 -->
+      <text style="left: 252rpx; top: -2rpx; font-family: 等线; font-size: 38rpx; position: relative" class="zuopin">符华-红叶知秋</text>
+      <!-- 作者 -->
+      <view>
+      <text style="position: relative; left: 248rpx; top: 10rpx; font-family: 等线; font-size: 32rpx">作者：战双帕弥什</text></view>
+      <view style="position: relative; left: 1rpx; top: 36rpx; display: flex; font-family: 等线" class="shijian"> 
+     
+      <text>2021-11-23 18:09:24</text>
+      <text style="position: relative; left: 70rpx; top: 0rpx">浏览量 902</text>
+      <text style="position: relative; left: 192rpx; top: 0rpx">下载量 299</text>
+
+</view>
+<!-- 具体内容 -->
+<view style="position: relative; left: 0rpx; top: 96rpx">
+
+<view style="font-family: 等线; font-size: 35rpx; color: #ca5858" class="b">介绍</view>
+<text class="a" style="display: flex; width: 674rpx; height: 36rpx; box-sizing: border-box; padding-left: 20rpx; font-family: 等线"> 丽芙精灵皮改
+created by 战双帕弥什/怪味馒头
+----------------禁止事项/Forbidden---------------
+
+
+
+■商业使用以及任何涉及到金钱交易的使用
+  有料ソフトへ持ち込んでのご使用は商用利用に繋がりかねないので
+  Commercial use
+
+■涉及R18（色情、血腥、暴力……）、政治、宗教、违反法律的使用
+  R18（エロ、血、暴力……）政治、宗教、犯罪の使用
+  R-18 (porn, blood, violence...), political, religious , crime use
+
+■侮辱他人或国家的使用
+  他者や他国を侮蔑するための利用
+  Contempt towards other countries or people
+
+■违反公共秩序与善良风俗、明智、健全的判断力的使用
+  公序良俗、良識に反する使用
+  Violating public and order, lack of wise and subtle judgment.  
+
+■欺瞒作者的信息或谎称自己为原作者
+  このデータの製作者を騙ること
+  Deceiving/Claiming to be the original creator
+
+-----------改造&再配布/Edit and Redistribution-----------
+
+■允许改造，但是不可以改造为其他角色，模型不论改造与否禁止二次配布
+  改造OKです, 但し、このモデルの一部を別モデルに移植不可。再配布禁止。
+  Allowed to edit ,but  it can't be edit out of character.Anyway,Redistribution is not allo </text>
+
+
+
+</view>

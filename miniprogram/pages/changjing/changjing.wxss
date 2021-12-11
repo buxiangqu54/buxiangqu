@@ -1,0 +1,50 @@
+/* pages/changjing/changjing.wxss */.swiperContainer{
+  margin-top: 20rpx;
+  bottom: 2rpx;
+  position: relative;
+  }
+  .imageContainer{
+    width: 100%;
+    margin-top: 20rpx;
+    height:420rpx;
+   
+  }
+  .turnItem{
+    height: 420rpx;
+
+  }
+  .itemImg{
+    position: absolute;
+    width: 99%;
+    height: 300rpx;
+    margin-top: 20rpx;
+    border-radius: 20rpx;
+  }
+  .imgActive{
+    opacity: 1;
+    height: 340rpx;
+    margin-top: 10rpx;
+    transition:all 0.01s ease-in 0s;
+  }
+  /* 指示点修饰 */
+  .dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25rpx;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot{
+    margin: 0 8rpx;
+    width: 18rpx;
+    height: 18rpx;
+    background-color: #666666;
+    border-radius: 8rpx;
+    transition: all .5s;
+  }
+  .dot.active{
+    width: 24rpx;
+    background: #fad81e;
+  }

@@ -1,0 +1,82 @@
+<!--pages/me/me.wxml-->
+<!--我的头像展示start-->
+<view class="myInfo">
+  <!--头像和昵称-->
+  <view wx:if="{{!openid}}">
+    <button open-type="getUserInfo" lang="zh_CN" bindtap="getUserProfile">点击登录</button>
+  </view>
+
+  <view class="uploader-container" wx:if="{{openid}}">
+    <image class="image" src="{{userinfo.avatarUrl}}" ></image>
+    <view class="name">{{userinfo.nickName}}</view>
+  </view>
+  <!--系统当前总人数-->
+  <view wx:if="{{openid}}" class="count">{{}}</view>
+  <view wx:if="{{openid}}" class="count">欢迎使用</view>
+</view>
+<!--我的头像展示end-->
+
+<!--底部功能展示-->
+<view class="other">
+<!-- 我的资料 -->
+  <view class="other-item" bindtap="info">
+    <view><image class="iconfont" src="/images/user3.png" style="position: relative; left: 0rpx; top: 8rpx; width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box"></image><text>我的资料</text></view>
+    <image src="/images/arrows.png"></image>
+  </view>
+ 
+<!-- 我的帖子 -->
+  <view class="other-item" bindtap="myTie">
+    <view><image class="iconfont" src="/images/user6.png" style="position: relative; left: 2rpx; top: -1rpx; width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box"></image><text>我的帖子</text></view>
+    <image src="/images/arrows.png"></image>
+  </view>
+  <!-- 我的参与 -->
+  <view class="other-item" bindtap="join">
+    <view><image class="iconfont" src="/images/user5.png" style="width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 10rpx; position: relative"></image><text>我的参与</text></view>
+    <image src="/images/arrows.png"></image>
+  </view>
+<!-- 我的点赞 -->
+  <view class="other-item" bindtap="zan">
+    <view><image class="iconfont" src="/images/user8.png" style="width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box; left: -2rpx; top: 10rpx; position: relative"></image><text>我的点赞</text></view>
+    <image src="/images/arrows.png"></image>
+  </view>
+  
+  <!-- 关于作者 -->
+  <view class="other-item" bindtap="zuozhe">
+    <view><image class="iconfont" src="/images/user4.png" style="width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box; left: -2rpx; top: 8rpx; position: relative"></image><text>关于作者</text></view>
+    <image src="/images/arrows.png"></image>
+  </view>
+<!-- 建议意见 -->
+<view class="progress">
+  <view class="feedback" style="width: 514rpx; height: 110rpx; display: block; box-sizing: border-box">
+			<button open-type="feedback" style="width: 746rpx; height: 110rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+				<view class="ico">
+					<image src="/images/feedback.png" style="position: relative; left: -36rpx; top: 0rpx; width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box"></image>
+				</view>
+				<view class="progress_text" style="width: 390rpx; height: 78rpx; display: block; box-sizing: border-box; position: relative; left: -23rpx; top: 0rpx; font-style: normal; font-family: 微软雅黑; font-size: 38rpx; font-weight: 400">意见反馈</view>
+				<view class="point">
+					<image src="/images/arrows.png" style="position: relative; left: 226rpx; top: -10rpx"></image>
+				</view>
+			</button>
+		</view>
+		<view class="divLine"></view>
+ 	<view class="service" style="width: 666rpx; height: 110rpx; display: block; box-sizing: border-box">
+			<button open-type="contact" style="width: 744rpx; height: 110rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+				<view class="ico">
+					<image src="/images/consult.png" style="position: relative; left: -38rpx; top: -8rpx; width: 44rpx; height: 48rpx; display: inline-block; box-sizing: border-box"></image>
+				</view>
+				<view class="progress_text" style="width: 624rpx; height: 78rpx; font-size: 38rpx; font-family: 微软雅黑; font-weight: 400; position: relative; left: -22rpx; top: 0rpx; display: block; box-sizing: border-box">联系客服</view>
+				<view class="point">
+					<image src="/images/arrows.png"></image>
+				</view>
+			</button>
+		</view>
+		<view class="divLine"></view>
+</view>
+</view>
+
+<view class="works">
+  <view class="pubTile">
+    <view class="txt">
+		<!-- 3 -->
+		</view></view></view>
+ <tabbar tabbar="{{tabbar}}"></tabbar>

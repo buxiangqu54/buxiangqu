@@ -1,0 +1,7 @@
+{
+    "usingComponents":{
+         "tabbar": "../../tabbarComponent/tabbar" ,
+        "SearchInput":"../../components/searchinput/searchinput"
+    },
+    "navigationBarTitleText": "MMD模型吧首页"
+}

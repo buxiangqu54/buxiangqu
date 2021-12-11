@@ -1,0 +1,36 @@
+
+<!--上传图片演示-->
+<form bindsubmit="submit">
+
+<!--帖子分类1-->
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{sort}}">
+    <view class="picker">
+      选择专区：{{sort[index]}}
+    </view>
+  </picker>
+
+<!--帖子的标题-->
+<view class="title">
+  <view class="title_right"><input style="width: 712rpx; height: 64rpx; display: block; box-sizing: border-box"  value="{{value1}}" type="text" name='name' maxlength='100' placeholder='输入标题'/></view>
+</view>
+
+<!--帖子的内容-->
+<textarea bindblur="blur"  value="{{value2}}" auto-height  maxlength="500" name='content' placeholder='输入内容'>
+</textarea>
+
+<!--帖子的图片-->
+<view class="img_box">
+<view class="imgs" wx:for="{{tempFilePaths}}" wx:key="index">
+  <image src='{{item}}' bindlongpress="DeleteImg" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' />
+</view>
+<view class="imgs" wx:if="{{nowCount<3}}">
+  <view class="images" bindtap="chooseImage">
+    <image src='../../images/upload.png' mode='widthFix' />
+  </view>
+</view>
+</view>
+
+<!--提交按钮-->
+<button class="tijiao" type="primary" formType="submit">提交</button>
+</form>
+

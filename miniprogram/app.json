@@ -1,0 +1,116 @@
+{
+  "pages": [
+    "pages/index/index",        
+    "pages/categery/index",
+    "pages/goods_list/index",
+    "pages/goos_detail/index",
+    "pages/cart/index",
+    "pages/collect/index",
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/pay/index",
+    "pages/list/list",
+    "pages/img/img",
+    "pages/me/me",
+    "pages/dongzuo/dongzuo",
+    "pages/changjing/changjing",
+    "pages/baike/baike",
+    "pages/renwu/renwu",
+    "pages/author/author",
+    "pages/shoucang/shoucang",
+    "pages/info/info",
+    "pages/submit/submit"
+  ],
+  "window":{
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ca5858",
+    "navigationBarTitleText": "MMD模型吧",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true  ,
+    "pageOrientation" :"auto" 
+    
+    
+  },
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/index/index",        
+        "pages/categery/index",
+        "pages/goods_list/index",
+        "pages/goos_detail/index",
+        "pages/cart/index",
+        "pages/collect/index",
+        "pages/order/index",
+        "pages/search/index",
+        "pages/user/index",
+        "pages/feedback/index",
+        "pages/login/index",
+        "pages/auth/index",
+        "pages/pay/index",
+        "pages/dongzuo/dongzuo",
+        "pages/changjing/changjing",
+        "pages/baike/baike",
+        "pages/renwu/renwu",
+        "pages/me/me",
+        "pages/auther/auther",
+        "pages/shoucang/shoucang"
+      ]
+    }, 
+  {
+      "root": "packageB",
+      "name": "pack2",
+      "pages": [
+        "pages/list/list",
+         "pages/img/img"
+         
+      ]
+    }
+  ],
+  "tabBar": {
+    
+    "selectedColor":"#d81e06",
+    "color":"",
+    "backgroundcolor":"#ca5858",
+    "borderStyle":"black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/首页-首页2.png",
+        "selectedIconPath": "images/首页-首页.png"
+      },
+      {
+        "pagePath": "pages/categery/index",
+        "text": "分类",
+        "iconPath": "images/分类(1).png",
+        "selectedIconPath": "images/分类.png"
+      },
+      {
+        "pagePath": "pages/shoucang/shoucang",
+        "text": "",
+        "iconPath": "images/_购物车(1).png",
+        "selectedIconPath": "images/_购物车.png",
+        "isSpecial": true
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "论坛",
+        "iconPath": "images/论坛.png",
+        "selectedIconPath": "images/论坛选择.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/我的 (1).png",
+        "selectedIconPath": "images/我的 (2).png"
+      }
+      ] },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

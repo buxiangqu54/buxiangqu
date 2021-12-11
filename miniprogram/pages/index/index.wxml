@@ -1,0 +1,163 @@
+<!-- <view>首页</view> -->
+
+<view class="first_index" >
+    <!-- 搜索框 -->
+    <SearchInput></SearchInput>
+</view>
+<!-- 轮播图 -->
+<view class="swiperContainer">
+      <swiper class="imageContainer" bindchange="swiperChange" previous-margin="55rpx" next-margin="55rpx" circular autoplay>
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item class="turnItem" >
+            <image  class="itemImg {{index == swiperCurrent ? 'imgActive': ''}}" src="{{item.image}}"   ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+        <!-- 指示点的修饰 -->
+        <view class="dots">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+              <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+      </view>
+      <!-- 分类导航1 -->
+  <view class="major1">
+    <view class="majorCon">
+      <navigator url="/pages/categery/index" style="width: 357rpx; height: 289rpx; display: block; box-sizing: border-box; margin-left: 10rpx; position: relative; left: 0rpx; top: 0rpx">
+        <image style="width: 401rpx; height: 287rpx; display: inline-block; box-sizing: border-box; position: relative; left: -11rpx; top: -2rpx"  class="pic" src="https://dcdn.it120.cc/2021/11/26/3b2ce409-c927-464f-9d53-fd27ce49c815.jpg" />
+        
+      </navigator>
+
+      <navigator url="/pages/categery/index" style="width: 357rpx; height: 289rpx; display: block; box-sizing: border-box; left: -28rpx; position: relative; top: 0rpx; margin-left: 50rpx">
+        <image style="width: 423rpx; height: 294rpx; display: inline-block; box-sizing: border-box; left: -37rpx; position: relative; top: -6rpx; padding-left: 20rpx"  class="pic" src="https://dcdn.it120.cc/2021/11/26/69187846-6e97-4373-84e4-6ef70483bcff.jpg" />
+      </navigator>
+      
+    </view>
+       
+  </view>
+  <!-- 分类导航2 -->
+  <view class="major2">
+  <view   class="majorSon" style="width: 750rpx; height: 339rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+      <navigator url="/pages/categery/index" style="width: 366rpx; height: 298rpx; display: block; box-sizing: border-box; position: relative; left: -4rpx; top: 0rpx; margin-top: 25rpx">
+        <image style="width: 339rpx; height: 287rpx; display: inline-block; box-sizing: border-box; position: relative; left: 31rpx; top: 8rpx"  class="pic" src="https://dcdn.it120.cc/2021/11/26/df19c525-3e15-4acf-b291-759f3af0dd46.jpg" />
+      </navigator>
+      
+      <navigator url="/pages/categery/index" style="width: 345rpx; height: 298rpx; display: block; box-sizing: border-box; position: relative; left: 20rpx; top: 17rpx; margin-top: 10rpx">
+        <image style="width: 385rpx; height: 287rpx; display: inline-block; box-sizing: border-box; position: relative; left: -6rpx; top: 10rpx"  class="pic" src="https://dcdn.it120.cc/2021/11/26/8f065f9c-de16-4bc6-908d-7aff08002156.jpg" />
+      </navigator>
+  </view>
+</view>
+<!-- 模型推荐 -->
+<view class="works">
+  <view class="pubTile">
+    <view class="txt">模型推荐</view>
+    <navigator class="more" target="" url="/pages/renwu/renwu" hover-class="navigator-hover" open-type="navigate" hestyle="font-size: 40rpx; font-family: 宋体" style="font-size: 35rpx; font-family: 宋体; height: 100%; color: #000">
+      更多 >
+    </navigator>
+  </view>
+  <view class="wkMain" style="display: flex; justify-content: space-between">
+    <navigator url="/pages/feedback/index" class="box" style="width: 356rpx; height: 378rpx; display: block; box-sizing: border-box">
+      <image style="width: 330rpx; height: 296rpx; display: inline-block; box-sizing: border-box"  class="pic" src="https://dcdn.it120.cc/2021/11/26/ed20da00-cd7a-484f-bd53-03a245859dfe.jpg" />
+      <view class="ceng">
+        <view class="tit" style="font-size: 24rpx; color: #666">符华-红叶知秋</view>
+        <view class="des" style="display: flex; justify-content: space-between; width: 338rpx; height: 38rpx; box-sizing: border-box; font-size: 24rpx; color: #666;">
+          神帝宇
+          <view class="line">2021-11-23</view>
+          </view>
+
+          
+      </view>
+    </navigator>
+
+<!-- 模型推荐作品 -->
+    <navigator url="/pages/dongzuo/dongzuo" class="box" style="width: 356rpx; height: 378rpx; display: block; box-sizing: border-box">
+      <image style="width: 356rpx; height: 294rpx; display: inline-block; box-sizing: border-box"  class="pic"     src="https://dcdn.it120.cc/2021/11/26/ad1ccd66-4d77-49d3-ac68-f287d85e8106.jpg" />
+      <view class="ceng">
+        <view class="tit" style="font-size: 24rpx; color: #666">丽芙·流光丨垂露芳馥</view>
+        <view class="des" style="display: flex; justify-content: space-between; width: 338rpx; height: 38rpx; box-sizing: border-box;font-size: 24rpx; color: #666">
+          少女前线2：追放
+          <view class="line">2021-11-22</view>
+          </view>
+
+          
+      </view>
+    </navigator>
+  </view>
+</view>
+<!-- 最近上传 -->
+<view class="recent">
+  <view class="container">
+    <view class="pubTile" style="width: 670rpx; height: 74rpx; display: flex; box-sizing: border-box">
+       <view class="txt">最近上传</view>
+        <navigator class="more" url=""  style="font-size: 35rpx; font-family: 宋体; height: 100%; color: #666">
+          更多 ></navigator>
+    </view>
+    <!-- 最近作品1 -->
+   <view class="dyMain">
+     <navigator url="/pages/baike/baike" class="dyItem">
+       <view class="pic">
+         <image style="width: 324rpx; height: 226rpx; display: inline-block; box-sizing: border-box"  src="https://dcdn.it120.cc/2021/11/26/a3bd55d5-77ff-45c6-8ec9-1555219c617a.jpg" />
+       </view>
+       <view class="txt">
+         <view class="title" style="font-size: 34rpx; font-family: 等线; width: 366rpx; height: 76rpx; display: block; box-sizing: border-box">
+           <!-- 作品名称 -->驱逐舰一哥055型驱逐舰
+           </view>
+         <view class="info" style="position: relative; left: 26rpx; top: 108rpx; font-size: 20rpx; color: #666; width: 314rpx; height: 26rpx; display: block; box-sizing: border-box">
+           <!-- 作者 -->御海龙-上传时间：2021-11-22
+         </view>
+       </view>
+     </navigator>
+   </view>
+<!-- 最近作品2 -->
+   <view class="dyMain">
+     <navigator url="/pages/changjing/changjing" class="dyItem">
+       <view class="pic">
+         <image style="width: 324rpx; height: 226rpx; display: inline-block; box-sizing: border-box"  src="https://dcdn.it120.cc/2021/11/26/75e260ac-50c9-46a7-a036-b98ec2b71333.jpg" />
+       </view>
+       <view class="txt" style="width: 324rpx; height: 234rpx; display: block; box-sizing: border-box">
+         <view class="title" style="font-size: 34rpx; font-family: 等线">
+           <!-- 作品名称 -->面包狗戌神沁音
+           </view>
+         <view class="info" style="position: relative; left: 24rpx; top: 152rpx; font-size: 20rpx; color: #666">
+           <!-- 作者 -->lmttlw-上传时间：2021-11-22
+         </view>
+       </view>
+     </navigator>
+   </view>
+<!-- 最近作品3 -->
+   <view class="dyMain">
+     <navigator url="/pages/renwu/renwu" class="dyItem">
+       <view class="pic">
+         <image style="width: 324rpx; height: 226rpx; display: inline-block; box-sizing: border-box"  src="https://dcdn.it120.cc/2021/11/26/067c5981-8253-4891-be61-a078ad11911a.jpg" />
+       </view>
+       <view class="txt" style="width: 324rpx; height: 234rpx; display: block; box-sizing: border-box">
+         <view class="title" style="font-size: 34rpx; font-family: 等线; width: 288rpx; height: 38rpx; display: block; box-sizing: border-box">
+           <!-- 作品名称 -->【原神】诺艾尔
+           </view>
+         <view class="info" style="position: relative; left: 36rpx; top: 144rpx; color: #666; font-size: 20rpx; width: 288rpx; height: 38rpx; display: flex; box-sizing: border-box">
+           <!-- 作者 -->原神-上传时间：2021-11-22
+         </view>
+       </view>
+     </navigator>
+   </view>
+  </view>
+ 
+</view>
+<!-- 图标 --> 
+<!-- 空白 -->
+<view class="works">
+  <view class="pubTile">
+    <view class="txt">
+		<!-- 4 -->
+		</view></view></view>
+<tabbar tabbar="{{tabbar}}"></tabbar>
+
+
+
+
+
+
+
+  
+
+

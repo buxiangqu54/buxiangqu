@@ -1,0 +1,43 @@
+
+<!-- 轮播图 -->
+<view class="swiperContainer">
+      <swiper class="imageContainer" bindchange="swiperChange" previous-margin="55rpx" next-margin="55rpx" circular autoplay>
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item class="turnItem" >
+            <image  class="itemImg {{index == swiperCurrent ? 'imgActive': ''}}" src="{{item.image}}"   ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+        <!-- 指示点的修饰 -->
+        <view class="dots">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+              <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+      </view>
+      <!-- 内容 -->
+      <text style="left: 252rpx; top: -2rpx; font-family: 等线; font-size: 38rpx; position: relative" class="zuopin">符华-红叶知秋</text>
+      <!-- 作者 -->
+      <view>
+      <text style="position: relative; left: 278rpx; top: 20rpx; font-family: 等线; font-size: 32rpx">作者：神帝宇</text></view>
+      <view style="position: relative; left: 1rpx; top: 36rpx; display: flex; font-family: 等线" class="shijian"> 
+     
+      <text>2021-11-23 18:09:24</text>
+      <text style="position: relative; left: 70rpx; top: 0rpx">浏览量 902</text>
+      <text style="position: relative; left: 192rpx; top: 0rpx">下载量 299</text>
+
+</view>
+<!-- 具体内容 -->
+<view style="position: relative; left: 0rpx; top: 96rpx">
+
+<view style="font-family: 等线; font-size: 35rpx; color: #ca5858" class="b">介绍</view>
+<text class="a" style="font-family: 等线; display: flex; width: 674rpx; height: 36rpx; box-sizing: border-box; padding-left: 20rpx">允许改造，优化骨骼和刚体，重制UV</text>
+<text class="a" style="font-family: 等线; display: flex; padding-left: 20rpx">===================</text>
+<text class="a" style="font-family: 等线; display: flex; padding-left: 20rpx">请勿用于18禁作品，极端宗教宣传，血腥恐怖猎奇作品，人身攻击等</text>
+<text class="a" style="font-family: 等线;padding-left: 20rpx">请勿用于商业用途</text>
+<text class="a" style="font-family: 等线;display: flex; padding-left: 20rpx">他人使用本模型所造成的一切不良后果，不由模型改造者与miHoYo承担，请向使用者追究全部责任</text>
+<text class="a" style="font-family: 等线;display: flex; padding-left: 20rpx">模型编辑：神帝宇</text>
+<text class="a" style="font-family: 等线;display: flex; padding-left: 20rpx">模型版权所属miHoYo</text>
+
+
+</view>

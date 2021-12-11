@@ -1,0 +1,138 @@
+/* pages/me/me.wxss */
+@import "/images/font/iconfont.wxss";
+page{
+  background:#F3F6FF;
+}
+.myInfo{
+  background: #E7624F;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 50rpx;
+  box-sizing: border-box;
+}
+.myInfo image{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.uploader-container{
+  display: flex;
+  justify-content: space-around;
+}
+.name{
+  color: #fff;
+  font-size: 36rpx;
+  margin: 30rpx 20rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.count{
+  box-sizing: border-box;
+  color: #fff;
+  padding-top: 35rpx;
+}
+
+.info_left{
+  display: flex;
+  justify-content: space-around;
+}
+.myInfo button{
+  background: #fff;
+  width: 100rpx;
+}
+.other-item{
+  border-bottom: 1rpx solid #ccc;
+  height: 130rpx;
+  padding:8rpx;
+  line-height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 38rpx;
+}
+.iconfont{
+  margin-right: 25rpx;
+  font-size: 55rpx;
+  width: 66rpx;
+}
+.other-item image{
+  width: 30rpx;
+  height: 30rpx;
+  position: relative;
+  top: 66rpx;}
+  
+  .icon-wodetiezi{
+  position: relative;
+  left: -15rpx;
+  color: #79E258;
+}
+
+  .icon-shoucang{
+  color:#FDDF33;
+}
+
+  .icon-tousu{
+  color:#FC781E;
+}
+.kefu{
+  /* display: inline-block; */
+  display: flex;
+ 
+  border-radius: 50rpx;
+  line-height: 130rpx;
+  margin-left: 0 !important; 
+  background: #F3F6FF;
+  position: relative;
+   left: -30rpx; 
+}
+
+.pubTile{
+  display: flex;
+  justify-content: space-between;
+  height: 200rpx;
+  align-items: center;
+  margin-top: 10rpx;
+
+}
+.pubTile .txt{
+  font-size: 34rpx;
+  height: 100%;
+  margin-left: 10rpx;
+  font-family:宋体 ;
+}
+.progress button {
+  display: flex;
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  background-color: #fff;
+  font-size: 31rpx;
+  padding-right:0;
+}
+
+.progress button::after, .list-wrapper button::after {
+  border: none;
+}
+
+.progress .ico image {
+  vertical-align: middle;
+  width: 55rpx;
+  height: 55rpx;
+  margin-left: -8rpx;
+  margin-right: 10rpx;
+} 
+
+.progress .progress_text {
+  width: 625rpx;
+  text-align: left;
+}
+
+.progress .point image {
+  vertical-align: middle;
+  width: 35rpx;
+  height: 35rpx;
+}
+  

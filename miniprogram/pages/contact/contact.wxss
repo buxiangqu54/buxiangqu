@@ -1,0 +1,12 @@
+/* pages/contact/contact.wxss */
+.tips{
+  text-align: center;
+  margin: 100rpx auto;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+image{
+  display: block;
+  margin: 20rpx auto;
+  width: 580rpx;
+}

@@ -1,0 +1,63 @@
+<view class="content">
+  <view class="bg" style="width: -30rpx; height: 76rpx; display: flex; box-sizing: border-box">
+    <view class="name" style="width: 164rpx; height: 76rpx; display: block; box-sizing: border-box">模型吧</view>
+    <form  bindsubmit="formSubmit">
+           <view class="search" style="width: 421rpx; height: 64rpx; display: flex; box-sizing: border-box; position: relative; left: -10rpx; top: 4rpx">
+       <button url="../find/find" class='find' form-type="submit" style="width: 104rpx; height: 44rpx; display: block; box-sizing: border-box; left: 306rpx; top: 2rpx; position: relative; font-size: 28rpx">
+        查询
+        </button>
+         <input style="position: relative; left: -111rpx; top: 2rpx; width: 308rpx; height: 44rpx; display: block; box-sizing: border-box; font-family: 宋体"  type="text" name="find" placeholder="帖子名称" form-type="submit"/>
+   
+    <button url="../submit/submit" class='btn' bindtap="img"  xstyle="position: relative; left: 170rpx; top: 0rpx; width: 140rpx; height: 76rpx; box-sizing: border-box; display: flex; justify-content: center; writing-mode: horizontal-tb; align-items: center; font-size: 28rpx" style="flex-direction: row; width: 162rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 422rpx; top: -2rpx; position: absolute">发帖</button>
+  
+    </view>
+     
+  </form>  
+  </view>
+  </view>  
+
+  <!--导航栏-->
+<view class="index-tab">
+  <view wx:for="{{loveSort}}">
+    <view  wx:if="{{index==sid}}" class="active" data-id="{{index}}" bindtap="sort" >{{item.name}}</view>
+    <view   wx:else="{{index!=sid}}" data-id="{{index}}" bindtap="sort">{{item.name}}</view>
+  </view>
+</view>
+
+<!--帖子的展示-->
+<view class="message">
+  <view class="message-item" wx:for="{{message}}" wx:key='key' data-id="{{item._id}}" bindtap="show">
+
+    <!--个人信息-->
+    <view class="top">
+      <image class="image" src="{{item.result[0].head}}" ></image>
+      <text>{{item.result[0].username}}</text>
+    </view>
+
+    <!--标题-->
+    <view class="title">{{item.title}}</view>
+
+    <!--内容-->
+    <view class="content">
+      {{item.content}}
+    </view>
+
+    <!--图片-->
+    <view class="images">
+      <image wx:for="{{item.url}}" wx:key='src' src="{{item}}"></image>
+    </view>
+
+    <!--评论和点赞-->
+    <view class="other">
+      <view><icon class="iconfont icon-xiaoxi1"></icon><text>{{item.messageNum}}</text></view>
+      <view><icon class="iconfont icon-dianzan"></icon><text>{{item.zan}}</text></view>
+    </view>
+  </view>
+ 
+</view>
+<view class="works">
+  <view class="pubTile">
+    <view class="txt">
+		<!-- 3 -->
+		</view></view></view>
+ <tabbar tabbar="{{tabbar}}"></tabbar>

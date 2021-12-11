@@ -1,0 +1,40 @@
+
+<!-- 轮播图 -->
+<view class="swiperContainer">
+      <swiper class="imageContainer" bindchange="swiperChange" previous-margin="55rpx" next-margin="55rpx" circular autoplay>
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item class="turnItem" >
+            <image  class="itemImg {{index == swiperCurrent ? 'imgActive': ''}}" src="{{item.image}}"   ></image>
+          </swiper-item>
+        </block>
+      </swiper>
+        <!-- 指示点的修饰 -->
+        <view class="dots">
+            <block wx:for="{{imgUrls}}" wx:key="index">
+              <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+            </block>
+        </view>
+      </view>
+      <!-- 内容 -->
+      <text style="left: 252rpx; top: -2rpx; font-family: 等线; font-size: 38rpx; position: relative" class="zuopin">符华-红叶知秋</text>
+      <!-- 作者 -->
+      <view>
+      <text style="position: relative; left: 278rpx; top: 20rpx; font-family: 等线; font-size: 32rpx">作者：UNSC秋风之墩号整备长</text></view>
+      <view style="position: relative; left: 1rpx; top: 36rpx; display: flex; font-family: 等线" class="shijian"> 
+     
+      <text>2021-11-23 18:09:24</text>
+      <text style="position: relative; left: 70rpx; top: 0rpx">浏览量 902</text>
+      <text style="position: relative; left: 192rpx; top: 0rpx">下载量 299</text>
+
+</view>
+<!-- 具体内容 -->
+<view style="position: relative; left: 0rpx; top: 96rpx">
+
+<view style="font-family: 等线; font-size: 35rpx; color: #ca5858" class="b">介绍</view>
+<text class="a" style="display: flex; width: 674rpx; height: 36rpx; box-sizing: border-box; padding-left: 20rpx; font-family: 等线">士官长是由Bungie创作的《光环》系列中的主角。首次登场于科幻第一人称射击游戏《光环:战斗进化》，同时也是名玩家角色。除了电子游戏外，该角也频繁出现于该系列的书籍和小说中。
+“This boy will be more useful to the UNSC, than a fleet of destroyers, a thousand Junior GradLieutenants -- or even me. In the end, the child may be the only thing that makes any difference” （这个小孩将来对 UNSC 军队极其重要，比一支驱逐舰队重要，比一千名军官重要，甚至比我还重要；将来，他可能是拯救世界的唯一希望。）
+壮哉我大UNSC </text>
+
+
+
+</view>
